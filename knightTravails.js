@@ -6,7 +6,7 @@ const chessPos = (x, y) => {
   let lastMove;
   const name = () => `${x}, ${y}`;
 
-  knightMoves = [
+  const knightMoves = [
     [1, 2],
     [1, -2],
     [2, 1],
@@ -17,12 +17,10 @@ const chessPos = (x, y) => {
     [-2, -1],
   ];
 
-  const getLastMove = () => {
-    return lastMove;
-  };
+  const getLastMove = () => lastMove;
 
   const setLastMove = (move) => {
-    lastMove = move || lastMove;
+    lastMove = lastMove || move;
   };
 
   const createMoves = () => {
